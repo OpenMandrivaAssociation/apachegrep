@@ -10,6 +10,7 @@ Source0: http://switch.dl.sourceforge.net/sourceforge/apachegrep/%{name}-%{versi
 License: GPL
 Group: File tools
 Url: http://apachegrep.sourceforge.net/
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Patch0: apachegrep-zcat.patch
 BuildArch: noarch
 Requires: gzip, bzip2
