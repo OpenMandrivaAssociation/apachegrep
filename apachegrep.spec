@@ -1,6 +1,6 @@
 %define name apachegrep
 %define version 0.3
-%define release %mkrel 4
+%define release 5
 
 Summary: A grep tool for apache log files 
 Name: %{name}
