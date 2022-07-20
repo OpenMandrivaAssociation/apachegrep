@@ -1,16 +1,11 @@
-%define name apachegrep
-%define version 0.3
-%define release 5
-
 Summary: A grep tool for apache log files 
-Name: %{name}
-Version: %{version}
-Release: %{release}
+Name: apachegrep
+Version: 0.3
+Release: 6
 Source0: http://switch.dl.sourceforge.net/sourceforge/apachegrep/%{name}-%{version}.tar.bz2
 License: GPL
 Group: File tools
 Url: http://apachegrep.sourceforge.net/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Patch0: apachegrep-zcat.patch
 BuildArch: noarch
 Requires: gzip, bzip2
@@ -27,8 +22,7 @@ to that field.
 It supports gzipped and bzipped log files.
 
 %prep
-%setup -q
-%patch0 -p0
+%autosetup -p0
 
 %build
 
@@ -47,33 +41,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc INSTALL CHANGELOG LICENSE README TODO 
 %{_bindir}/apachegrep
 %{_mandir}/man1/*
-
-
-
-
-
-%changelog
-* Thu Dec 09 2010 Oden Eriksson <oeriksson@mandriva.com> 0.3-4mdv2011.0
-+ Revision: 616564
-- the mass rebuild of 2010.0 packages
-
-* Tue Sep 01 2009 Thierry Vignaud <tv@mandriva.org> 0.3-3mdv2010.0
-+ Revision: 423978
-- rebuild
-
-* Thu Jun 19 2008 Thierry Vignaud <tv@mandriva.org> 0.3-2mdv2009.0
-+ Revision: 226156
-- rebuild
-
-* Thu Dec 20 2007 Olivier Blin <oblin@mandriva.com> 0.3-1mdv2008.1
-+ Revision: 135820
-- restore BuildRoot
-
-  + Thierry Vignaud <tv@mandriva.org>
-    - kill re-definition of %%buildroot on Pixel's request
-
-
-* Tue Mar 27 2007 Erwan Velu <erwan@mandriva.org> 0.3-1mdv2007.1
-+ Revision: 148903
-- Import apachegrep
-
