@@ -5,7 +5,7 @@ Release: 6
 Source0: http://switch.dl.sourceforge.net/sourceforge/apachegrep/%{name}-%{version}.tar.bz2
 License: GPL
 Group: File tools
-Url: http://apachegrep.sourceforge.net/
+Url: https://apachegrep.sourceforge.net/
 Patch0: apachegrep-zcat.patch
 BuildArch: noarch
 Requires: gzip, bzip2
